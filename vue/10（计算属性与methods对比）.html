@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+</head>
+
+<script type="text/javascript" src="../vue.js"></script>
+
+<body>
+<div id="vuediv">
+    //mustache语法：语法繁琐
+    <h2>{{firstName}}  {{lastName}}</h2>
+    //通过定义methods   每次都执行
+    <h2>{{getFullName()}}</h2>
+    //通过计算属性   效率高，执行一次
+    <h2>{{fullName}}</h2>
+
+</div>
+</body>
+</html>
+
+<script>
+    const app = new Vue({
+        el:"#vuediv",
+        data:{
+            firstName:"Lebron",
+            lastName:"James",
+        },
+        computed:{
+            fullName:{
+                get:function(){
+                    return this.firstName+" "+this.lastName;
+                }
+            }
+        },
+        methods:{
+            getFullName(){
+                return this.firstName+" "+this.lastName;
+            }
+        }
+    });
+</script>

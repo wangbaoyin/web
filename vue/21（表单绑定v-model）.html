@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单绑定v-model</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+<div id="vuediv">
+    //数据双向绑定<br>
+    <input type="text" v-model="message"/>{{message}}<br>
+    //v-model实现双向绑定的原理<br>
+    <input type="text" :value="message" v-on:input="valueChange"/>{{message}}<br>
+    <input type="text" :value="message" @input="message=$event.target.value"/>{{message}}
+    <br>
+    <br>
+    //label的好处：点文字也能选中<br>
+    <label>
+    <input type="radio" id="man" name="sex" value="男" v-model="sex"/>男
+    </label>
+    <label>
+    <input type="radio" id="women" name="sex" value="女" v-model="sex"/>女
+    </label>
+    <h2>选择的性别是：{{sex}}</h2>
+
+
+    <label>
+        <input type="checkbox" id="agree" v-model="isAgree"/>同意协议
+    </label>
+    <h2>您选择的是：{{isAgree}}</h2>
+    <button :disabled="!isAgree">下一步</button>
+
+
+
+<br><br><br>
+        <input type="checkbox" value="篮球" v-model="hobbies"/>篮球
+        <input type="checkbox" value="足球" v-model="hobbies"/>足球
+        <input type="checkbox" value="羽毛球" v-model="hobbies"/>羽毛球
+        <input type="checkbox" value="排球" v-model="hobbies"/>排球
+    <h2>您的爱好是：{{hobbies}}</h2>
+
+    <br><br><br>
+
+    <select name="haha"  v-model="city">
+        <option value="北京">--北京--</option>
+        <option value="上海">--上海--</option>
+        <option value="重庆">--重庆--</option>
+        <option value="天津">--天津--</option>
+        <option value="深圳">--深圳--</option>
+    </select>
+    <h2>您所在的城市是：{{city}}</h2>
+
+    <select name="haha"  v-model="citys" multiple>
+        <option value="北京">--北京--</option>
+        <option value="上海">--上海--</option>
+        <option value="重庆">--重庆--</option>
+        <option value="天津">--天津--</option>
+        <option value="深圳">--深圳--</option>
+    </select>
+    <h2>您所在的城市是：{{citys}}</h2>
+
+    <label v-for="item in originCitys" :for="item">
+        <input type="checkbox" :value="item" :id="item" v-model="citys"/>{{item}}
+    </label>
+
+    <br><br><br>
+    //v-model修饰符<br>
+
+    //1.lazy:可以让数据在失去焦点或者回车时才会更新<br>
+    <input type="text" v-model.lazy="message"/>{{message}}
+    <br>
+    //2.number:只允许输入数字<br>
+    <input type="number" v-model="age"/>{{age}}   {{typeof age}}
+    <br>
+
+    //2.trim:去除空格<br>
+    <input type="text" v-model.trim="message"/>{{message}}
+    <br>
+</div>
+</body>
+</html>
+
+<script>
+    const app=new Vue({
+        el:"#vuediv",
+        data:{
+            message:"hahaha",
+            sex:"男",
+            isAgree:false,
+            hobbies:[],
+            city:"天津",
+            citys:[],
+            originCitys:['河南省','河北省','山东省','陕西省','山西省','湖北省','湖南省'],
+            age:''
+        },
+        methods:{
+            valueChange(event){
+                this.message = event.target.value;
+            }
+        }
+    });
+
+
+    const nums = [10,20,111,222,333,444,54,56];
+    //取出所有小于100的数字
+    let newnums = [];
+    for(let num of nums){
+        if(num<100){
+            newnums.push(num);
+        }
+    }
+    //将所有小于100的数字全部乘以2
+    let newnums2 = [];
+    for(let num of newnums){
+        newnums2.push(num*2);
+    }
+
+    //使用高阶函数
+    let newnums3 = nums.filter(function(num){
+        return num<100;
+    })
+    console.log(newnums3)
+
+    let newnum4 =  newnums3.map(function(num){
+        return num*2;
+    })
+    console.log(newnum4);
+
+    //reduce对数组中所有内容进行汇总
+    let newnum5 = newnum4.reduce(function(preValue,num){
+          return preValue+num;
+    },0)
+    console.log(newnum5);
+
+</script>

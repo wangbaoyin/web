@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插值操作</title>
+</head>
+<style>
+[v-cloak]{
+    display: none;
+}
+
+</style>
+<script type="text/javascript" src="../vue.js"></script>
+
+<body>
+<div id="vuediv" v-cloak>
+   // Mustache语法
+    <h2> {{message}}</h2>
+    <h2> {{firstName + lastName}}</h2>
+    <h2> {{firstName +'  '+lastName}}</h2>
+    <h2> {{firstName}} {{lastName}}</h2>
+    <h2> {{counter*2}}</h2>
+    //v-once指令 ：该指令不需要跟任何表达式，表示元素和组件只渲染一次，不会随着数据的改变而改变
+    <h2 v-once> {{message}}</h2>
+    //v-html指令 ：解析内容中html
+    <h2>{{url}}</h2>
+    <h2 v-html="url"></h2>
+    //v-text指令 : 不解析html,会覆盖掉标签中的内容，不灵活，使用少
+    <h2 v-text="url"></h2>
+    <h2 v-text="url">hahaha</h2>
+    //v-pre : 按照原内容显示不做任何解析
+    <h2 v-pre>{{message}}</h2>
+    //v-cloak : （斗篷）在vue加载之前隐藏html
+
+
+
+</div>
+</body>
+</html>
+
+<script>
+  //在vue  解析之前div中有一个属性v-cloak
+  //在vue 解析之后div中没有属性v-cloak
+setTimeout(function(){
+    const app = new Vue({
+        el:"#vuediv",//指定挂载的html元素
+        data:{//定义数据
+            message:"hello!!!",
+            firstName:"Kobe",
+            lastName:"bryant",
+            counter:100,
+            url:"<a href = 'http://www.baidu.com'>百度一下</a>"
+        }
+    });
+
+},2000);
+
+
+
+</script>

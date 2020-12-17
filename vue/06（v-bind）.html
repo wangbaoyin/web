@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind</title>
+</head>
+<style>
+
+    .active{
+        color:red;
+    }
+
+</style>
+<script type="text/javascript" src="../vue.js"></script>
+
+<body>
+<div id="vuediv">
+    <img src="http://192.168.1.67:8884/upload/default.jpg" style="width: 50px;height: 70px"></img>
+    <img v-bind:src="imageUrl" style="width: 50px;height: 70px"></img>
+    <br>
+    <a href="www.baidu.com">百度一下</a>
+    <a v-bind:href="url">百度一下</a>
+   <br>
+    //v-bind语法糖
+    <br>
+    <img :src="imageUrl" style="width: 50px;height: 70px"></img>
+    <a :href="url">百度一下</a>
+    <br>
+    //v-bind绑定class
+    <h2 :class="activeC">{{message}}</h2>
+    //v-bind 对象语法 动态的class会与现有的title 合并
+    <h2 class="title" v-bind:class="{active:isActive,line:isLine}">{{message}}</h2>
+    <h2 class="title" v-bind:class="getClasses()">{{message}}</h2>
+    //v-bind 数组语法
+    <h2 class="title" :class="['active','line']">{{message}}</h2>
+    <h2 class="title" :class="[activeV,lineV]">{{message}}</h2>
+</div>
+</body>
+</html>
+
+<script>
+        const app = new Vue({
+            el:"#vuediv",
+            data:{
+                message:"你好！！！",
+                imageUrl:"http://192.168.1.67:8884/upload/default.jpg",
+                url:"www.baidu.com",
+                activeC:'active',
+                isActive:true,
+                isLine:true,
+                activeV:"active",
+                lineV:"line"
+            },
+            methods:{
+                getClasses:function(){
+                    return {active:this.isActive,line:this.isLine};
+                }
+            }
+        });
+</script>

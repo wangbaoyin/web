@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>局部组件</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+
+<div id="vuediv">
+    //3.使用组件<br>
+    <cpn></cpn>
+</div>
+</body>
+</html>
+
+<script>
+    //1.创建组件构造器对象
+    const cpnContructor = Vue.extend({
+        template:`
+                <div>
+                    <h2>我是H2标题</h2>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                </div>`
+    });
+
+    const app=new Vue({
+        el:"#vuediv",
+        data:{
+
+        },//局部组件
+        components:{
+            //cpn使用组件时候的标签名
+            cpn:cpnContructor
+        }
+    });
+</script>

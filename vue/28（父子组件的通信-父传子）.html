@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父子组件的通信</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+
+<div id="vuediv">
+  <cpn v-bind:cmovies="movies" :cmessage="message" :c-Info="info">
+
+
+  </cpn>
+</div>
+
+
+
+<template id="cpn">
+    <div>
+        <ul >
+            <li v-for="(movie,index) in cmovies">{{index+1}}.{{movie}}</li>
+        </ul>
+        message: {{cmessage}}<br>
+        cInfo:{{cInfo}}
+    </div>
+</template>
+
+
+</body>
+</html>
+
+<script>
+//通过props子组件传递数据
+
+
+//父传子
+const cpn = {
+    template:'#cpn',
+    //props:['cmovies','cmessage'],等同于下面写法，下面写法可以指定数据类型，还可以指定默认值
+    props:{
+        //cInfo驼峰传参时要写成:c-Info
+        cInfo:{
+            type:Object,
+            default(){
+                return{}
+            }
+        },
+        cmovies:Array,
+        cmessage:{
+            type:String,
+            default:'aaaa',
+            required:true//标识该属性必须传值
+        }
+    },
+    data(){
+       return {}
+    },
+    methods:{
+
+    }
+}
+
+const app=new Vue({
+    el:"#vuediv",
+    data:{
+        info:{
+            name:"test",
+            height:"185cm"
+        },
+        message:'hello!!!',
+        movies:['水浒传','西游记','红楼梦','三国演义']
+    },
+    components:{
+          cpn
+    }
+});
+
+</script>

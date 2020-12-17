@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+<div id="vuediv">{{message}}</div>
+</body>
+</html>
+
+<script>
+    //vue三种安装方式   CDN   下载js   npm
+    //es5只有函数作用域和全局作用域，es6新添了块级作用域
+   /* var、let、const的区别
+    var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问，有变量提升。
+    let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问，无变量提升，不可以重复声明。
+    const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改，无变量提升，不可以重复声明。注意：const常量，指的是常量对应的内存地址不得改变，而不是对应的值不得改变，所有把应用类型的数据设置为常量，其内部的值是可以改变的，例如：const a={}; a.b=13;//不会报错 const arr=[]; arr.push(123);//不会报错
+    let 声明的变量只在块级作用域内有效
+    */
+
+   const app = new Vue({
+       el:"#vuediv",//指定挂载的html元素
+       data:{//定义数据
+           message:"hello vue!!!"
+       }
+   });
+
+
+</script>

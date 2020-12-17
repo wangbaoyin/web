@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小案例</title>
+
+</head>
+<style type="text/css">
+    .active{
+        color:red
+    }
+</style>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+
+<div id="vuediv">
+
+    <ul>
+        <li v-for="(item,index) in names">
+           <span  :class="{active:index===currentIndex}" @click="changeCurrentIndex(index)">{{index+1}}.{{item}}</span>
+        </li>
+    </ul>
+
+
+
+</div>
+</body>
+</html>
+
+<script>
+    const app=new Vue({
+        el:"#vuediv",
+        data:{
+            names:['James','Kobe','Curry','Haha','Hadeng'],
+            currentIndex:0
+        },
+        methods:{
+            changeCurrentIndex(index){
+                this.currentIndex = index;
+            }
+        }
+    });
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let和var</title>
+</head>
+<body>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+<button>5</button>
+</body>
+</html>
+
+<script type="text/javascript">
+    //var没有块级作用域
+    //let有块级作用域
+
+
+    //变量作用域：变量在什么范围内可使用
+    {
+        var name = "123";
+        console.log(name);
+    }
+    console.log(name);
+    {
+        let name2 = "456";
+        console.log(name2);
+    }
+   // console.log(name2);
+
+
+    //没有块级作用域引起的问题
+    //if的块级，块内的变量可以被修改
+    if(true){
+        var name3 = '567';
+        func=function(){
+            console.log(name3);
+        }
+        func();
+    }
+    func();
+    name3 = "890";
+    console.log(name3);
+
+    //for的块级
+    var btns = document.getElementsByTagName('button');
+    for(var i=0;i<btns.length;i++){
+        btns[i].addEventListener('click',function(){
+            console.log('第'+(i+1)+'个按钮被点击！');
+        })
+    }
+    //闭包解决没有块级作用域问题
+    for(var i=0;i<btns.length;i++){
+        //匿名函数闭包直接被调用
+        (function(num){
+            btns[num].addEventListener('click',function(){
+                console.log('第'+(num+1)+'个按钮被点击！--闭包');
+            })
+        })(i)
+        //普通函数闭包
+        function clickBtn(num){
+            btns[num].addEventListener('click',function(){
+                       console.log('第'+(num+1)+'个按钮被点击！--闭包');
+            })
+        }
+        clickBtn(i);
+    }
+
+    //ES6  增加了块级作用域  ES6循环绑定事件写法
+    const btns6 = document.getElementsByTagName('button');
+    for(let i=0;i<btns6.length;i++){
+        btns[i].addEventListener('click',function(){
+            console.log('第'+(i+1)+'个按钮被点击！');
+        })
+    }
+
+
+</script>

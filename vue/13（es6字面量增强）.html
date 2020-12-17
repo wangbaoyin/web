@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>es6对象字面量增强</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+    const obj = new Object();
+    const obj = {};//{}就叫对象字面量
+
+    const obj = {
+        name:"haha",
+        age:"25",
+        height:"1",
+        run:function(){
+
+        },
+        eat:function(){
+
+        }
+    }
+
+    //1.属性增强写法
+
+    const name = "haha";
+    const age = 12;
+    const height = 123;
+
+    //es5写法
+    const obj = {
+        name:name,
+        age:age,
+        height:height
+    }
+
+    //es6写法
+    const obj = {
+        name,
+        age,
+        height
+    }
+
+    //2.函数的增强写法
+     //es5
+    const obj = {
+        run:function(){
+
+        },
+        eat:function(){
+
+        }
+    }
+    //es6
+    const obj = {
+        run(){
+
+        },
+        eat(){
+
+        }
+    }
+
+
+
+
+</script>

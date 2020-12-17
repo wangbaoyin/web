@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件监听：v-on</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+<div id="vuediv">
+    当前计数是：{{counter}}
+    <br>
+    //v-on的参数问题
+    //
+    <button v-on:click="add">+</button>
+    <button v-on:click="sub">-</button>
+    <!--語法糖寫法-->
+    <button @click="sub">-</button>
+    <br>
+    <button v-on:click="btnClick">btnClick</button>
+    <button v-on:click="btnClick()">btnClick()</button>
+    <button v-on:click="btnClick(123)">btnClick(123)</button>
+<br>
+    //浏览器的event事件传递方式<br>
+    <button @click="btn2Click(123,$event)">btn2Click</button>
+    <br>
+    //v-on修饰符<br>
+    //1.v-on修饰符.stop:阻止时间冒泡 相当于event.stopPropagation()<br>
+    <div @click="divClick" >
+        div div div div
+        <button @click.stop="btnClick">按钮</button>
+    </div>
+    //2.v-on修饰符.prevent 相当于event.preventDefault()<br>
+    <form action="baidu">
+        <input type="submit" value="Submit" @click.prevent="submitClick">
+    </form>
+    //3.监听键盘某个按键的点击@keyup  监听enter的keyup:@keyup.enter   <br>
+    <input type="text" @keyup.enter="keyUp()"/>
+    //4.once修饰符:点击事件只触发一次<br>
+    <button @click.once="divClick">once修饰符</button>
+</div>
+</body>
+</html>
+
+<script>
+    const app=new Vue({
+        el:"#vuediv",
+        data:{
+           counter:0
+        },
+        methods:{
+           add(){
+               this.counter++;
+           },
+            sub(){
+                this.counter--;
+            },
+            btnClick(params){
+               console.log(params,"btnClick.......");
+            },
+            btn2Click(param,event){
+               console.log(param,event);
+            },
+            divClick(){
+               console.log("divClick...")
+            },
+            submitClick(){
+               console.log("submitClick...");
+            },
+            keyUp(){
+               console.log("keyUp...")
+            }
+        }
+    });
+</script>

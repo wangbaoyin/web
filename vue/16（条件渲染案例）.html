@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染案例</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+<div id="vuediv">
+    //防止input复用，加key属性
+    <span v-if="isUser">用户账号:<input type="text" id="username" placeholder="用户账号" key="username"/></span>
+
+    <span v-else>用户邮箱:<input type="text" id="email" placeholder="用户邮箱" key="email"/></span>
+
+    <button @click="isUser=!isUser">切换类型</button>
+
+</div>
+</body>
+</html>
+
+<script>
+    const app=new Vue({
+        el:"#vuediv",
+        data:{
+          isUser:true
+        },
+        methods:{
+
+
+        }
+
+    });
+</script>

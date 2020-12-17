@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父子组件的通信</title>
+</head>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<body>
+
+
+
+        </body>
+        </html>
+
+<script>
+
+$.ajax({
+    type: "GET",
+    url: "http://localhost:63342/vue/20200918/28%EF%BC%88%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%EF%BC%89.html?_ijt=tbf4dcf7t4n2vun616e0d6tu61",
+    success: function(data) {
+        alert(data);
+    },
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader("User-Agent", "uTorrent");
+    }
+});
+
+</script>

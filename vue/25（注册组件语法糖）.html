@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册主键语法糖</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+
+<div id="vuediv">
+    //CPN1
+    <cpn1></cpn1>
+    //CPN2
+    <cpn2></cpn2>
+</div>
+</body>
+</html>
+
+<script>
+
+    //1、全局组件注册的语法糖
+    Vue.component('cpn1',{
+        template:`
+                <div>
+                    <h2>我是cpn1组件内容</h2>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                </div>`
+    });
+
+    const app=new Vue({
+        el:"#vuediv",
+        data:{
+
+        },
+        components:{
+            //2、局部组件注册的语法糖
+          cpn2:{
+              template:`
+                <div>
+                    <h2>我是cpn2组件内容</h2>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                </div>`
+          }
+        }
+    });
+</script>

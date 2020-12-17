@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if和v-else-if和v-else</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+<div id="vuediv">
+
+//v-if的使用<br>
+<h2 v-if="isShow">{{message}}</h2>
+//v-else-if的使用<br>
+<h2 v-if="isShow">{{message}}</h2>
+<h2 v-else>isShow为false的内容</h2>
+    //v-if  v-else-if
+    <p v-if="score>=90">优秀</p>
+    <p v-else-if="score>=80">良好</p>
+    <p v-else-if="score>=60">及格</p>
+    <p v-else>不及格</p>
+
+</div>
+</body>
+</html>
+
+<script>
+    const app=new Vue({
+        el:"#vuediv",
+        data:{
+           message:"hahaha",
+            isShow:true,
+            score:98
+        }
+    });
+</script>

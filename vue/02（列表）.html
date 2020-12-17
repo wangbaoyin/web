@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表展示</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+<div id="vuediv">
+
+<ul>
+    <li v-for="haha in list">{{haha}}</li>
+</ul>
+</div>
+</body>
+</html>
+
+<script>
+const app=new Vue({
+    el:"#vuediv",
+    data:{
+        list:["1","2","3","4"]
+    }
+});
+//响应式
+app.list.push("5");
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件化</title>
+</head>
+<script type="text/javascript" src="../vue.js"></script>
+<body>
+//组件化思想：提供了一种抽象，让我们可以开发出一个个独立可复用的小组件来构造应用；任何应用都会被抽象成一颗组件树<br>
+//组件使用三步骤：<br>
+//创建组件构造器<br>
+//注册组件<br>
+//使用组件<br>
+<cpn>
+
+</cpn>
+<br>
+<br>
+<br>
+<div id="vuediv">
+    //3.使用组件<br>
+    <cpn></cpn>
+</div>
+</body>
+</html>
+
+<script>
+    //ES6 '' ""  ``一样
+
+    //1.创建组件构造器对象
+    const cpnContructor = Vue.extend({
+        template:`
+                <div>
+                    <h2>我是H2标题</h2>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                    <p>我是内容部分。。。</p>
+                </div>`
+    });
+
+    //2.注册组件  (全局组件) //cpn使用组件时候的标签名
+    Vue.component('cpn',cpnContructor);
+
+
+    const app=new Vue({
+        el:"#vuediv",
+        data:{
+
+        }
+    });
+</script>
