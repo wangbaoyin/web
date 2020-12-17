@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cebac251-630a-42b2-ae96-15b332fb6bf1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="HTML4 File" />
+        <option value="XHTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\HP\IdeaProjects\vue\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hfGhFMeVIbDRktE2FWP4kylgOy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vue" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\vue\20200918" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\vue\vue" />
+      <recent name="C:\Users\HP\IdeaProjects\vue\javaScript" />
+      <recent name="C:\Users\HP\IdeaProjects\vue" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cebac251-630a-42b2-ae96-15b332fb6bf1" name="Default Changelist" comment="" />
+      <created>1600394849444</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600394849444</updated>
+      <workItem from="1600394851734" duration="81000" />
+      <workItem from="1600394942273" duration="12391000" />
+      <workItem from="1600423854944" duration="83735000" />
+      <workItem from="1602319255688" duration="6723000" />
+      <workItem from="1603085981705" duration="250000" />
+      <workItem from="1603087858797" duration="20000" />
+      <workItem from="1603087890787" duration="13000" />
+      <workItem from="1603087943142" duration="62000" />
+      <workItem from="1603088031293" duration="23000" />
+      <workItem from="1603088115123" duration="13000" />
+      <workItem from="1603088142122" duration="124000" />
+      <workItem from="1603088448509" duration="32000" />
+      <workItem from="1603088589602" duration="17000" />
+      <workItem from="1603159137047" duration="1715000" />
+      <workItem from="1603331909868" duration="599000" />
+      <workItem from="1603333635650" duration="1785000" />
+      <workItem from="1603338192214" duration="3258000" />
+      <workItem from="1603431201633" duration="660000" />
+      <workItem from="1603434995406" duration="10000" />
+      <workItem from="1603435377515" duration="15139000" />
+      <workItem from="1604283016877" duration="1591000" />
+      <workItem from="1604296448832" duration="1747000" />
+      <workItem from="1604310913212" duration="4674000" />
+      <workItem from="1604892929780" duration="17638000" />
+      <workItem from="1607928699575" duration="3521000" />
+    </task>
+    <task id="LOCAL-00001" summary="初始提交">
+      <created>1608175085511</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608175085511</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始提交" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="331" y="28" key="CommitChangelistDialog2" timestamp="1608175084926">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="331" y="28" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1608175084926" />
+    <state x="500" y="188" key="FileChooserDialogImpl" timestamp="1604309688589">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="500" y="188" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1604309688589" />
+    <state x="223" y="75" key="SettingsEditor" timestamp="1600770983510">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="223" y="75" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1600770983510" />
+    <state x="312" y="166" key="Vcs.Push.Dialog.v2" timestamp="1608175176735">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="312" y="166" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1608175176735" />
+    <state x="412" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1603431202554">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="412" y="257" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1603431202554" />
+    <state x="94" y="92" key="new project wizard" timestamp="1606459873621">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="94" y="92" key="new project wizard/0.0.1440.860@0.0.1440.860" timestamp="1606459873621" />
+    <state x="383" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1603954970652">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="383" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1603954970652" />
+  </component>
+</project>
